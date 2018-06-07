@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./prototype.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <script>
+        // 'use strict'
+        // a=10;
+        // console.log(a);
+        // this == window . this.name window.name
+    //     function getEmployeename(){
+    //         return this.name;
+    //     }
+    //     var test ={
+    //         name: 'praveen',
+    //         getName: function(){
+    //             return this.name;
+    //         }
+    //     }
+    //     function getEmployeeDetails(age,exp){
+    //         return 'name '+this.name + ' age: '+ age + 'exp: '+ exp;
+    //     }
+    //    // document.write(test.getName());
+    //     //console.log(getEmployeename('praveen'));
+    //     // console.log(window.name);
+    //     var obj={name: 'praveen',age:21};
+    //    // document.write(getEmployeename.call(obj));
+    //   //  document.write(getEmployeename.apply(obj));
+    //  //   document.write(getEmployeeDetails.call(obj,26,7));
+    //     document.write(getEmployeeDetails.apply(obj,[26,7]));
+
+    // getEmployee.prototype.getName = function(){
+    //     console.log(this.name);
+    //     return this.name.toUpperCase();
+    // }
+    // var e1 = new getEmployee('praveen');
+    // e1.getName = function(){
+    //     return this.name.toUpperCase();
+    // }
+    // var e2 = new getEmployee('kumar');
+    // document.write(e1.getName()+":"+e2.getName());
+        var Employee = function(name){
+            this.name = name;
+        }
+        Employee.prototype.getName = function(){
+            return this.name;
+        }
+        var PermanentEmployee = function(salary){
+            this.salary = salary;   
+        }
+        var employee = new Employee('praveen');
+        PermanentEmployee.prototype = new Employee('praveen');
+        var pm = new PermanentEmployee(1000);
+        console.log(pm.getName());
+         </script>
+    </body>
+</html>
+
