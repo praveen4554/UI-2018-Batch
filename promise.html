@@ -1,0 +1,108 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+        async function f() {
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("done!"), 1000)
+  });
+
+  let result = await promise; // wait till the promise resolves (*)
+
+  alert(result); // "done!"
+console.log('Hello');
+}
+
+f();
+    //       var mythri = function(){
+    //           console.log('mythri');
+    //       }
+    //    // var a=[1,2,3,4,5];
+    //       var ui = function(callback){
+    //          setTimeout(function(){ console.log("Hello"); }, 3000);
+    //       }
+    //       var employee = function(callback){
+    //           console.log('ui team');
+    //           callback();
+    //       }
+    //       employee(ui);  
+    //       employee(mythri); 
+    //       var add = function(num1,num2){
+    //           return num1+num2;
+    //       }
+    //       var multiply = function(num1,num2){
+    //           return num1*num2;
+    //       }
+    //       var calc = function(num1,num2, calcType){
+    //           calcType(num1,num2);
+    //       }
+    //       console.log(calc(2,3,add));
+    //       console.log(calc(2,3,multiply));
+        //   var promise = function(){
+        //       return new Promise(function(resolve, reject){
+        //     let call = true;
+        //     if(call)
+        //      resolve(call);
+        //     else
+        //     reject('failure');
+        //   });
+        //   }
+        //   var promise1 = function(res){
+        //       return new Promise(function(resolve,reject){
+        //       //console.log(res);
+        //       if(res)
+        //         resolve(!res)
+        //      else
+        //         reject(res)
+        //   });
+        //   }
+        //   var Promise2 = function(res){
+        //       return new Promise(function(vid,sha){
+        //      // console.log(res);
+        //      if(res)
+        //      vid(res);
+        //      else
+        //     sha(res);
+        //   });
+        //   }
+        //   promise.then(function(res){
+        //       console.log('promise response'+ res);
+        //   }).catch(function(err){
+        //       console.log('promise err'+ err);
+        //   });
+         
+        //  promise().then(function(res){
+        //      console.log('promise1'+res);
+        //      return promise1(res);
+        //  }).then(function(result){
+        //      console.log('promise2'+result);
+        //      return Promise2(res);
+        //  }).then(function(res){
+        //      console.log('promise3'+res)
+        //  }).catch(function(err){
+        //      console.log(err);
+        //  });
+        //  promise.all([promise(),promise1(),Promise2()]).then(function(){
+        //      console.log('success');
+        //  });
+        //  promise.race([promise(),promise1(),Promise2()]).then(function(){
+        //      console.log('success');
+        //  });
+
+        //   var calc= function(num1,num2,calctype){
+        //       if(calctype == 'add'){
+        //           return num1+num2;
+        //       } else if(calctype == 'multiply'){
+        //           return num1*num2;
+        //       }
+        //   }
+        //   calc(2,3,'add');
+        //   console.log('test');
+        //   setTimeout(function(){ console.log("Hello"); }, 3000);
+        //   console.log('after set timeout');
+        </script>
+        </body>
+</html>
+

@@ -206,7 +206,20 @@ var test = {
 </script>
 
 
-this follows context scope 
+this follows context scope or parent scope 
+
+
+we normally go with promises or callbacks
+
+
+
+Object desturction 
+    var obj={a:'praveen',b:'kumar'}
+    obj={praveen:10,kumar:20}
+
+    a-- praveen -10
+    b -- kumar -20
+
 
 
 
