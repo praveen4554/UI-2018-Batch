@@ -5,13 +5,14 @@
         <script>
         async function f() {
 
-  let promise = new Promise((resolve, reject) => {
-    setTimeout(() => resolve("done!"), 1000)
-  });
+//   let promise = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve("done!"), 1000)
+//   });
 
-  let result = await promise; // wait till the promise resolves (*)
+//   let result = await promise; // wait till the promise resolves (*)
 
-  alert(result); // "done!"
+//   alert(promise); // "done!"
+ setTimeout(() => console.log("done!"), 1000)
 console.log('Hello');
 }
 
@@ -102,6 +103,32 @@ f();
         //   console.log('test');
         //   setTimeout(function(){ console.log("Hello"); }, 3000);
         //   console.log('after set timeout');
+        var promise = new Promise(function(resolve,reject){
+            let val=true;
+            if(val)
+                resolve('success promise');
+            else
+                reject('failure promise');
+        });
+        var promise1 = function(res){
+            return new Promise(function(resolved,rejected){
+                resolved(res+' promise1');
+            });
+        }
+        var Promise2 = function(res){
+            return new Promise(function(har,haritha){
+                har(res+' promise2');
+            })
+        }
+        promise.then(function(res){
+            return promise1(res)
+        }).then(function(res){
+            return Promise2(res);
+        }).then(function(result){
+            console.log(result);
+        }).catch(function(err){
+            console.log(err);
+        }); 
         </script>
         </body>
 </html>

@@ -226,4 +226,9 @@ Object desturction
 
 
 
+get -- values getting
+POST -- creating 
+PUT -- update
+Delete -- deleteing the data
 
+AJAX -- asynchronous javaScript and xml
